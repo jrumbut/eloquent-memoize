@@ -1,16 +1,18 @@
 {
     "name": "jrumbut/eloquent-memoize",
-    "description": "",
+    "description": "Memoization for Eloquent (Laravel) Models",
     "keywords": [
-        "Skeleton",
-        "PSR"
+        "Memoization",
+        "Laravel",
+        "Eloquent"
     ],
     "homepage": "https://github.com/jrumbut/eloquent-memoize",
     "license": "MIT",
     "authors": [
         {
             "name": "Joshua Rumbut",
-            "email": "joshua.rumbut@gmail.com"
+            "email": "joshua.rumbut@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
