@@ -59,8 +59,8 @@ class MemoizingModel extends Model
     /**
     * Set (and clear memoized value for) a given attribute on the model.
     *
-    * @param  string  $key
-    * @param  mixed  $value
+    * @param string $key
+    * @param mixed  $value
     * @return $this
     */
     public function setAttribute($key, $value)
@@ -77,12 +77,12 @@ class MemoizingModel extends Model
      * Memoize attributes
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      */
-     public function memoizeAttribute($key, $value)
-     {
-         $this->memoized_values[$key] = $value;
-     }
+    public function memoizeAttribute($key, $value)
+    {
+        $this->memoized_values[$key] = $value;
+    }
 
     /**
     * Get the memoized attributes for the model.
@@ -97,7 +97,7 @@ class MemoizingModel extends Model
     /**
     * Set the memoized attributes for the model.
     *
-    * @param  array  $memoized
+    * @param array $memoized
     * @return $this
     */
     public static function setMemoized(array $memoized)
@@ -108,7 +108,7 @@ class MemoizingModel extends Model
     /**
     * Disable all memoization.
     *
-    * @param  bool  $state
+    * @param bool $state
     * @return void
     */
     public static function disableMemoization($state = false)
@@ -132,9 +132,9 @@ class MemoizingModel extends Model
      * @param string $key
      * @return bool should_be_memoized
      */
-     public function shouldBeMemoized($key)
-     {
-         $memoized = $this->getMemoized();
-         return (in_array($key, $memoized) || $memoized == ['*'])  && static::$memoizing_enabled;
-     }
+    public function shouldBeMemoized($key)
+    {
+        $memoized = $this->getMemoized();
+        return (in_array($key, $memoized) || $memoized == ['*'])  && static::$memoizing_enabled;
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace Jrumbut\EloquentMemoize;
 
-use Jrumbut\EloquentMemoize\Tests\Models\MyModel;
+use Jrumbut\EloquentMemoize\Models\MyModel;
 
 class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
 {

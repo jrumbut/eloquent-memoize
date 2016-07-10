@@ -1,5 +1,5 @@
 <?php
-namespace Jrumbut\EloquentMemoize\Tests\Models;
+namespace Jrumbut\EloquentMemoize\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Jrumbut\EloquentMemoize\MemoizingModel;
@@ -36,5 +36,5 @@ class MyModel extends MemoizingModel
      *
      * @var Array
      */
-     protected $memoized = ['*'];
+    protected static $memoized = ['*'];
 }

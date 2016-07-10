@@ -34,7 +34,7 @@
         "psr-4": {
             "Jrumbut\\EloquentMemoize\\": [
                 "tests/",
-                "tests/Fake"
+                "tests/Models"
             ]
         }
     },
