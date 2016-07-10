@@ -68,9 +68,9 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-downloads]: https://img.shields.io/packagist/dt/jrumbut/EloquentMemoize.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/jrumbut/EloquentMemoize
-[link-travis]: https://travis-ci.org/jrumbut/EloquentMemoize
-[link-scrutinizer]: https://scrutinizer-ci.com/g/jrumbut/EloquentMemoize/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/jrumbut/EloquentMemoize
+[link-travis]: https://travis-ci.org/jrumbut/eloquent-memoize
+[link-scrutinizer]: https://scrutinizer-ci.com/g/jrumbut/eloquent-memoize/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/jrumbut/eloquent-memoize
 [link-downloads]: https://packagist.org/packages/jrumbut/EloquentMemoize
 [link-author]: https://github.com/jrumbut
 [link-contributors]: ../../contributors
