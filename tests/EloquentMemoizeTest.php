@@ -12,12 +12,12 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->skeleton = new EloquentMemoize;
+        $this->skeleton = new MemoizingModel;
     }
 
     public function testNew()
     {
         $actual = $this->skeleton;
-        $this->assertInstanceOf('\Jrumbut\EloquentMemoize\EloquentMemoize', $actual);
+        $this->assertInstanceOf('\Jrumbut\EloquentMemoize\MemoizingModel', $actual);
     }
 }
