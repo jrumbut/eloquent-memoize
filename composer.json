@@ -5,15 +5,18 @@
         "Skeleton",
         "PSR"
     ],
-    "homepage": "https://github.com/koriym/PHP.Skeleton",
+    "homepage": "https://github.com/jrumbut/eloquent-memoize",
     "license": "MIT",
     "authors": [
         {
-            "name": "Joshua Rumbut"
+            "name": "Joshua Rumbut",
+            "email": "joshua.rumbut@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=5.5.0",
+        "illuminate/database": "5.1.* || 5.2.* || 5.3.*",
+        "illuminate/support": "5.1.* || 5.2.* || 5.3.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8 || ~5.0",
