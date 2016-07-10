@@ -2,6 +2,8 @@
 
 namespace Jrumbut\EloquentMemoize;
 
+use Jrumbut\EloquentMemoize\Tests\Models\MyModel;
+
 class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -12,12 +14,18 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->skeleton = new MemoizingModel;
+        $this->skeleton = new MyModel(['id' => 1, 'name' => 'thomas pynchon']);
     }
 
     public function testNew()
     {
         $actual = $this->skeleton;
         $this->assertInstanceOf('\Jrumbut\EloquentMemoize\MemoizingModel', $actual);
+    }
+
+    public function testMemoizationEnabledByDefault()
+    {
+        $actual = $this->skeleton;
+        $this->assertTrue($actual->shouldBeMemoized('name'));
     }
 }
