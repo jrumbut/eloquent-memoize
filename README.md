@@ -14,7 +14,7 @@ Memoization for [Eloquent](https://laravel.com/docs/5.2/eloquent) models.
 Via Composer
 
 ``` bash
-$ composer require jrumbut/EloquentMemoize
+$ composer require jrumbut/eloquent-memoize
 ```
 
 ## Usage
