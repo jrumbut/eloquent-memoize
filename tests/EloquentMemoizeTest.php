@@ -28,4 +28,19 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
         $actual = $this->skeleton;
         $this->assertTrue($actual->shouldBeMemoized('name'));
     }
+
+    public function testCorrectFieldsAreMemoized()
+    {
+        $actual = $this->skeleton;
+        MyModel::setMemoized(['id']);
+        $this->assertFalse($actual->shouldBeMemoized('name'));
+        $this->assertTrue($actual->shouldBeMemoized('id'));
+    }
+
+    public function testSetAndGetFields()
+    {
+        $actual = $this->skeleton;
+        MyModel::setMemoized(['id']);
+        $this->assertEquals($actual->getMemoized(), ['id']);
+    }
 }
