@@ -6,6 +6,7 @@
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/86871de1-5cb6-4015-ba22-ce4c8827974c/mini.png)](https://insight.sensiolabs.com/projects/86871de1-5cb6-4015-ba22-ce4c8827974c)
 
 Memoization for [Eloquent](https://laravel.com/docs/5.2/eloquent) models.
 

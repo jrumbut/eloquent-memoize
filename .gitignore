@@ -1,9 +1,6 @@
-nbproject
 ._*
 .~lock.*
 .buildpath
-.DS_Store
-.idea
 .project
 .settings
 cache.properties
@@ -15,15 +12,11 @@ vendor/
 # OS generated files #
 ######################
 *~
-.DS_Store*
 .project
 .settings
-ehthumbs.db
 Icon?
-Thumbs.db
 .svn
 .directory
-*.swp
 .env
 
 # IDE generated files #
@@ -39,8 +32,5 @@ Thumbs.db
 *.perspectivev3
 *.mode1v3
 *.mode2v3
-*.swp
 *~.nib
-nbproject
 .komodotools
-.idea
