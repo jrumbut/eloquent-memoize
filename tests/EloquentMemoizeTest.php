@@ -57,6 +57,16 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($trait_model->getMemoized(), []);
     }
 
+    public function testEnableMemoization()
+    {
+        $my_model = $this->skeleton;
+        MyModel::setMemoized(['name']);
+        MyModel::disableMemoization();
+        $this->assertEquals($my_model->getMemoized(), []);
+        MyModel::enableMemoization();
+        $this->assertTrue($my_model->shouldBeMemoized('name'));
+    }
+
     public function testSettingMemoizedToStringShouldFail()
     {
         $this->expectException('TypeError');

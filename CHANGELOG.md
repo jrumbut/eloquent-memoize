@@ -4,6 +4,24 @@ All Notable changes to `EloquentMemoize` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.1.0 - 2016-07-17
+
+### Added
+- Additional testing
+- Option to use a trait
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Nothing
+
+### Removed
+- Option to set boolean parameter for `disableMemoization`
+
+### Security
+- Nothing
+
 ## v0.0.2-alpha - 2016-07-10
 
 ### Added
