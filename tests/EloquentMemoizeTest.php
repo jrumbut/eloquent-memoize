@@ -3,6 +3,8 @@
 namespace Jrumbut\EloquentMemoize;
 
 use Jrumbut\EloquentMemoize\Models\MyModel;
+use Jrumbut\EloquentMemoize\Models\TraitModel;
+use Illuminate\Database\Eloquent\Model;
 
 class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,32 +17,49 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
         $this->skeleton = new MyModel(['id' => 1, 'name' => 'thomas pynchon']);
+        $this->trait_skeleton = new TraitModel(['id' => 2, 'name' => 'philip k dick']);
     }
 
     public function testNew()
     {
-        $actual = $this->skeleton;
-        $this->assertInstanceOf('\Jrumbut\EloquentMemoize\MemoizingModel', $actual);
+        $my_model = $this->skeleton;
+        $trait_model = $this->trait_skeleton;
+        $this->assertInstanceOf('\Illuminate\Database\Eloquent\Model', $my_model);
+        $this->assertInstanceOf('\Jrumbut\EloquentMemoize\MemoizingModel', $my_model);
+        $this->assertInstanceOf('\Illuminate\Database\Eloquent\Model', $trait_model);
     }
 
     public function testMemoizationEnabledByDefault()
     {
-        $actual = $this->skeleton;
-        $this->assertTrue($actual->shouldBeMemoized('name'));
+        $my_model = $this->skeleton;
+        $this->assertTrue($my_model->shouldBeMemoized('name'));
     }
 
     public function testCorrectFieldsAreMemoized()
     {
-        $actual = $this->skeleton;
+        $my_model = $this->skeleton;
         MyModel::setMemoized(['id']);
-        $this->assertFalse($actual->shouldBeMemoized('name'));
-        $this->assertTrue($actual->shouldBeMemoized('id'));
+        $this->assertFalse($my_model->shouldBeMemoized('name'));
+        $this->assertTrue($my_model->shouldBeMemoized('id'));
     }
 
-    public function testSetAndGetFields()
+    public function testSetAndGetMemoized()
     {
-        $actual = $this->skeleton;
+        $my_model = $this->skeleton;
         MyModel::setMemoized(['id']);
-        $this->assertEquals($actual->getMemoized(), ['id']);
+        $this->assertEquals($my_model->getMemoized(), ['id']);
+    }
+
+    public function testDisableMemoization()
+    {
+        $trait_model = $this->trait_skeleton;
+        TraitModel::disableMemoization();
+        $this->assertEquals($trait_model->getMemoized(), []);
+    }
+
+    public function testSettingMemoizedToStringShouldFail()
+    {
+        $this->expectException('TypeError');
+        MyModel::setMemoized('id');
     }
 }

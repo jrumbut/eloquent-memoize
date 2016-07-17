@@ -33,6 +33,31 @@ class MyModel extends MemoizingModel
 }
 ```
 
+-or-
+
+``` php
+class TraitModel extends Model
+{
+    /**
+     * Initialize attributes
+     *
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+        static::setMemoized(['slow']);
+    }
+
+    //Now only slow the first time it's accessed
+    public function getSlowAttribute($value)
+    {
+        sleep(3);
+        return ucwords($value);
+    }
+}
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
