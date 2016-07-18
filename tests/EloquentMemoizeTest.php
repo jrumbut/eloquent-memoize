@@ -67,9 +67,12 @@ class EloquentMemoizeTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($my_model->shouldBeMemoized('name'));
     }
 
+    /**
+     * @expectedException TypeError
+     */
     public function testSettingMemoizedToStringShouldFail()
     {
-        $this->expectException('TypeError');
+        //$this->expectException('TypeError');
         MyModel::setMemoized('id');
     }
 }
