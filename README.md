@@ -80,6 +80,7 @@ If you discover any security related issues, please email joshua.rumbut@gmail.co
 ## Credits
 
 - [Joshua Rumbut][link-author]
+- Akihito Koriyama (akihito.koriyama@gmail.com) for the excellent [PHP.Skeleton](https://github.com/koriym/PHP.Skeleton) package
 - [All Contributors][link-contributors]
 
 ## License
